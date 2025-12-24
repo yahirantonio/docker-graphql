@@ -41,6 +41,8 @@ jobs:
         docker build -t yahirdz/docker-graphql:latest .
         
     - name: push docker image
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push yahirdz/docker-graphql:$NEW_VERSION
         docker push yahirdz/docker-graphql:latest

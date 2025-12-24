@@ -26,3 +26,11 @@ jobs:
         echo "Iniciando login"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
+
+    - name: build docker image
+      run: |
+        docker build -t yahirdz/docker-graphql:1.0.2 .
+        
+    - name: push docker image
+      run: |
+        docker push yahirdz/docker-graphql:1.0.2 .

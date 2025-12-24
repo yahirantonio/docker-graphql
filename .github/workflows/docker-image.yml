@@ -33,4 +33,4 @@ jobs:
         
     - name: push docker image
       run: |
-        docker push yahirdz/docker-graphql:1.0.2 .
+        docker push yahirdz/docker-graphql:1.0.2
